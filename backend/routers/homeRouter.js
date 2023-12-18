@@ -1,6 +1,6 @@
 const express = require("express");
 
- //child router
+//child router
 const userRouter = require("./userRouter");
 
 // guards
@@ -8,7 +8,6 @@ const Middleware = require("../middleware");
 
 // get controllers
 const UserController = require("../controllers/userController");
-
 
 // craete router
 const homeRouter = express.Router();
@@ -26,7 +25,7 @@ const userDrinkRouter = require("./userDrinkRouter");
 // free
 homeRouter.post("/user/login", UserController.login);
 homeRouter.post("/user/register", UserController.post);
-homeRouter.post("/user/googleLogin", UserController.googleLogin)
+homeRouter.post("/user/googleLogin", UserController.googleLogin);
 
 // token guard
 homeRouter.use(Middleware.tokenGuard);
@@ -39,13 +38,12 @@ homeRouter.use("/chat", chatRouter);
 homeRouter.use("/post", postRouter);
 homeRouter.use("/comment", commentRouter);
 homeRouter.use("/userGame", userGameRouter);
-homeRouter.use("/gift", giftRouter)
-homeRouter.use("/userDrink", userDrinkRouter)
+homeRouter.use("/gift", giftRouter);
+homeRouter.use("/userDrink", userDrinkRouter);
 // homeRouter.use("/user", USER_ROUTER)
 // homeRouter.use("/lodging", LODGING_ROUTER)
 // homeRouter.get("/", HomeController.getHome)
 // homeRouter.post("/add-user", Middleware.checkCredit, AuthController.postAddUser) // only cred > 50!
-
 
 // exports
 module.exports = homeRouter;
