@@ -17,7 +17,10 @@ module.exports = class ChatRoomController {
   static async post(req, res, next) {
     try {
       const { name } = req.body;
-      const res = await Chat_Room.create({ name });
+      const res = await Chat_Room.create({
+        name,
+        user_id: req.loggedInUser.id,
+      });
       res.status(201).json({
         status: 201,
         msg: `Chat room successfully created.`,
