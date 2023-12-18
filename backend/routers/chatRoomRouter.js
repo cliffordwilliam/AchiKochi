@@ -16,6 +16,7 @@ const chatRoomRouter = express.Router();
 
 // endpoints
 chatRoomRouter.get("/", ChatRoomController.get);
+chatRoomRouter.post("/", ChatRoomController.post);
 
 
 // exports
