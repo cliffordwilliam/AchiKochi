@@ -1,1 +1,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;700;800&family=Righteous&display=swap");
+
+:root {
+	--white-color: #fbfef9;
+	--black-color: #000004;
+	--primary-color: #359381;
+	--secondary-color: #65c1b0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Righteous", sans-serif;
+}
+
+body {
+	background: var(--white-color);
+	min-height: 100dvh;
+	overflow-x: hidden;
+}
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 30px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.logo {
+	font-size: 2rem;
+	color: var(--primary-color);
+	pointer-events: none;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: var(--primary-color);
+	padding: 6px 15px;
+	border-radius: 20px;
+	margin: 0 10px;
+	font-weight: 600;
+}
+
+.navigation a:hover {
+	background: var(--primary-color);
+	color: var(--white-color);
+}
+
+.parallax {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100dvh;
+}
+
+#text {
+	position: absolute;
+	font-size: 5rem;
+	color: var(--secondary-color);
+}
+
+.parallax img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+}
