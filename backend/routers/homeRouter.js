@@ -1,6 +1,6 @@
 const express = require("express");
 
- //child router
+//child router
 const userRouter = require("./userRouter");
 
 // guards
@@ -8,7 +8,6 @@ const Middleware = require("../middleware");
 
 // get controllers
 const UserController = require("../controllers/userController");
-
 
 // craete router
 const homeRouter = express.Router();
