@@ -5,6 +5,7 @@
 	--black-color: #000004;
 	--primary-color: #359381;
 	--secondary-color: #65c1b0;
+	--accent-color: #003329;
 }
 
 * {
@@ -36,15 +37,18 @@ header {
 	font-size: 2rem;
 	color: var(--primary-color);
 	pointer-events: none;
+	text-shadow: 1px 1px var(--black-color);
 }
 
 .navigation a {
 	text-decoration: none;
-	color: var(--primary-color);
+	font-size: 1.1rem;
+	color: var(--white-color);
 	padding: 6px 15px;
 	border-radius: 20px;
 	margin: 0 10px;
 	font-weight: 600;
+	text-shadow: 2px 2.7px 0.5rem var(--black-color);
 }
 
 .navigation a:hover {
@@ -63,7 +67,8 @@ header {
 #text {
 	position: absolute;
 	font-size: 5rem;
-	color: var(--secondary-color);
+	color: var(--white-color);
+	text-shadow: 2.8px 5px 2rem var(--black-color);
 }
 
 .parallax img {
@@ -72,4 +77,22 @@ header {
 	left: 0;
 	width: 100%;
 	pointer-events: none;
+}
+
+.sec {
+	position: relative;
+	background: var(--accent-color);
+	padding: 100px;
+}
+
+.sec h2 {
+	font-size: 3rem;
+	color: var(--white-color);
+	margin-bottom: 10px;
+}
+
+.sec p {
+	font-size: 1rem;
+	color: var(--white-color);
+	font-weight: 300;
 }
