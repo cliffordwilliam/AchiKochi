@@ -2,14 +2,14 @@
   "development": {
     "username": "postgres",
     "password": "postgres",
-    "database": "amenhotep",
+    "database": "achikochi",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "postgres",
-    "database": "amenhotepTest",
+    "database": "achikochiTest",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
