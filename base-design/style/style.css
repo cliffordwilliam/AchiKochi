@@ -349,6 +349,7 @@ header {
 	object-fit: cover;
 }
 
-* {
+/* FOR DEBUGGING STYLING */
+/* * {
 	outline: solid red;
-}
+} */
