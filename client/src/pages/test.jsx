@@ -1,10 +1,7 @@
 const MockChatRoom = () => {
-    const img =
-        "https://ik.imagekit.io/hohoho/hill1.png?updatedAt=1702982737950";
     return (
         <>
             <body>
-                {/* <img src={img} alt="hill3" id="hill3" /> */}
                 <header>
                     <h2 className="logo">あっちこっち</h2>
                     <nav className="navigation">
@@ -18,35 +15,43 @@ const MockChatRoom = () => {
 
                 <section class="parallax">
                     <img
-                        src="./assets/image/hill1.png"
+                        src="https://ik.imagekit.io/hohoho/hill1.png?updatedAt=1702982737950"
                         alt="hill1"
                         id="hill1"
                     />
                     <img
-                        src="./assets/image/hill2.png"
+                        src="https://ik.imagekit.io/hohoho/hill2.png?updatedAt=1702982738062"
                         alt="hill2"
                         id="hill2"
                     />
                     <img
-                        src="./assets/image/hill3.png"
+                        src="https://ik.imagekit.io/hohoho/hill3.png?updatedAt=1702984518141"
                         alt="hill3"
                         id="hill3"
                     />
                     <img
-                        src="./assets/image/hill4.png"
+                        src="https://ik.imagekit.io/hohoho/hill4.png?updatedAt=1702984518181"
                         alt="hill4"
                         id="hill4"
                     />
                     <img
-                        src="./assets/image/hill5.png"
+                        src="https://ik.imagekit.io/hohoho/hill5.png?updatedAt=1702984518182"
                         alt="hill5"
                         id="hill5"
                     />
-                    <img src="./assets/image/tree.png" alt="tree" id="tree" />
-                    <h2 id="text">AcchiKochi | Weeb's Talk</h2>
-                    <img src="./assets/image/leaf.png" alt="leaf" id="leaf" />
                     <img
-                        src="./assets/image/plant.png"
+                        src="https://ik.imagekit.io/hohoho/tree.png?updatedAt=1702984517990"
+                        alt="tree"
+                        id="tree"
+                    />
+                    <h2 id="text">AcchiKochi | Weeb's Talk</h2>
+                    <img
+                        src="https://ik.imagekit.io/hohoho/leaf.png?updatedAt=1702984518161"
+                        alt="leaf"
+                        id="leaf"
+                    />
+                    <img
+                        src="https://ik.imagekit.io/hohoho/plant.png?updatedAt=1702984518152"
                         alt="plant"
                         id="plant"
                     />

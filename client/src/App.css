@@ -63,7 +63,6 @@ header {
 	justify-content: center;
 	align-items: center;
 	height: 99.4dvh;
-	z-index: 1;
 }
 
 #text {
@@ -85,6 +84,7 @@ header {
 	position: relative;
 	background: var(--accent-color);
 	padding: 100px;
+	z-index: 1;
 }
 
 .sec h2 {
@@ -105,6 +105,8 @@ header {
 	background: var(--white-color);
 	font-size: 1rem;
 	text-transform: capitalize;
+	z-index: 1;
+	position: relative;
 }
 
 .credit span {
@@ -114,11 +116,12 @@ header {
 }
 
 .chat-box {
+	/* z-index: 1; */
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: linear-gradient(#003329, #359381);
-	/* z-index: 0; */
 }
 
 .chat-box .container {
@@ -348,6 +351,10 @@ header {
 	height: 100%;
 	object-fit: cover;
 }
+
+/* html, body, #root {
+	height: 100%;
+} */
 
 /* FOR DEBUGGING STYLING */
 /* * {
