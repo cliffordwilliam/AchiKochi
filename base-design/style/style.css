@@ -307,13 +307,33 @@ header {
 	text-overflow: ellipsis;
 }
 
+.chat-box .container .rightside .header {
+	position: absolute;
+	width: 100%;
+	height: 15rem;
+	background: var(--white-color);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+	padding: 0 15px;
+	border-top-right-radius: 0.4rem;
+}
+
 .rightside .header .imgtext {
 	position: relative;
-	width: 40px;
-	height: 40px;
+	width: 10rem;
+	height: 10rem;
 	overflow: hidden;
 	border-radius: 50%;
 	cursor: pointer;
+	left: 1rem;
+}
+
+.rightside .header .imgtext h4 {
+	color: var(--primary-color);
+	font-size: 2.7rem;
+	font-weight: 600;
 }
 
 .rightside .header .imgtext .cover {
