@@ -17,9 +17,17 @@ module.exports = class ChatRoomController {
     static async post(req, res, next) {
         try {
             const { name } = req.body;
+            //check name
+            const checkname = await Chat_Room.findOne({ where: { name } });
+            if (checkname)
+                throw {
+                    name: "CustomError",
+                    msg: "NameAlreadyExist",
+                    status: 400,
+                };
             const obj = await Chat_Room.create({
                 name,
-                user_id: req.loggedInUser.id,
+                user_id: 1,
             });
             res.status(201).json({
                 status: 201,

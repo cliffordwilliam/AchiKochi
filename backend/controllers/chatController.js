@@ -15,7 +15,7 @@ module.exports = class ChatController {
         // front end determine the chat_room_id. 1 view = 1 room = 1 id
         try {
             // get user_id from the loggedInUser
-            const user_id = req.loggedInUser.id;
+            const user_id = 1;
             // unpack the body
             let { chat_room_id, message } = req.body;
             // check int and clamp

@@ -20,11 +20,10 @@ homeRouter.post("/user/register", UserController.post);
 homeRouter.post("/user/googleLogin", UserController.googleLogin);
 
 // token guard
-homeRouter.use(Middleware.tokenGuard);
+// homeRouter.use(Middleware.tokenGuard);//unguarded for now
 homeRouter.use("/user", userRouter);
 homeRouter.use("/chatRoom", chatRoomRouter);
 homeRouter.use("/chat", chatRouter);
-
 
 // exports
 module.exports = homeRouter;
