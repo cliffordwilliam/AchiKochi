@@ -1,10 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { APIrequest } from "./Store/apiSlice";
+import c from "./const";
+import io from "socket.io-client";
+import { useParams } from "react-router-dom";
+// import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const id = 1; // Temp hard code room - later from btn
+  const socket = io.connect(c.localBaseUrl); // c.AmenhotepBaseUrl (LIVE)
+  useEffect(() => {
+    // Establish a WebSocket connection to your backend
+    socket.emit("join_room", +id);
+  }, []);
+
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,7 +42,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
