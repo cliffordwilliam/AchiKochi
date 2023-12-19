@@ -15,6 +15,14 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         validate: {},
       },
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false, // required
+        validate: {
+          notNull: { msg: "User id is required." }, // required
+          notEmpty: { msg: "User id cannot be empty." }, // required
+        },
+      },
     },
     {
       sequelize,
