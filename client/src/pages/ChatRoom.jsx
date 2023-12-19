@@ -5,6 +5,9 @@ import c from "../const";
 import io from "socket.io-client";
 import { useParams } from "react-router-dom";
 
+import SpotifyDashboard from "./SpotifyDashboard";
+const code = new URLSearchParams(window.location.search).get("code");
+
 export default function ChatRoom() {
   //   const { id } = useParams();
   const id = 1; // Temp hard code room - later from btn
@@ -186,6 +189,18 @@ export default function ChatRoom() {
 
   return (
     <div>
+      {code ? (
+        <SpotifyDashboard code={code} />
+      ) : (
+        <a
+          className="btn m"
+          href={
+            "https://accounts.spotify.com/authorize?client_id=c427c4dced8b46f092bea016eb4ab5a0&response_type=code&redirect_uri=http://localhost:5174&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state"
+          }
+        >
+          Login With Spotify
+        </a>
+      )}
       {/* <h1>{chatRoomTitle}</h1> */}
       {chats.length === 0 ? (
         <p>Loading...</p>
