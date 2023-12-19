@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { APIrequest } from "./Store/apiSlice";
@@ -9,41 +8,45 @@ import { useParams } from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./router/router";
 
 function App() {
-  const id = 1; // Temp hard code room - later from btn
-  const socket = io.connect(c.localBaseUrl); // c.AmenhotepBaseUrl (LIVE)
-  useEffect(() => {
-    // Establish a WebSocket connection to your backend
-    socket.emit("join_room", +id);
-  }, []);
+    const id = 1; // Temp hard code room - later from btn
+    const socket = io.connect(c.localBaseUrl); // c.AmenhotepBaseUrl (LIVE)
+    useEffect(() => {
+        // Establish a WebSocket connection to your backend
+        socket.emit("join_room", +id);
+    }, []);
 
-  const [count, setCount] = useState(0);
+    async function onScroll() {
+        let text = document.getElementById("text");
+        let leaf = document.getElementById("leaf");
+        let hill1 = document.getElementById("hill1");
+        let hill4 = document.getElementById("hill4");
+        let hill5 = document.getElementById("hill5");
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
+        window.addEventListener("scroll", () => {
+            let value = window.scrollY;
+
+            text.style.marginTop = value * 2.5 + "px";
+            leaf.style.top = value * -1.5 + "px";
+            leaf.style.left = value * 1.5 + "px";
+            hill5.style.left = value * 1.5 + "px";
+            hill4.style.left = value * -1.5 + "px";
+            hill1.style.top = value * 1 + "px";
+        });
+    }
+
+    useEffect(() => {
+        onScroll();
+    });
+
+    return (
+        <>
+            <RouterProvider router={router} />
+        </>
+    );
 }
 
 export default App;
