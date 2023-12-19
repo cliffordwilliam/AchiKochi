@@ -239,3 +239,10 @@ header {
 .leftside .search-chat div input::placeholder {
 	color: var(--white-color);
 }
+
+.leftside .search-chat div i {
+	position: absolute;
+	left: 30px;
+	top: 14px;
+	font-size: 1.2rem;
+}
