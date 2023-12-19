@@ -17,7 +17,6 @@ const MockChatRoom = () => {
     const [roomId, setRoomId] = useState(21);
     const [chats, setChats] = useState([]); // all chats db
     const [headlines, setHeadlines] = useState([]);
-    console.log(headlines, `HHH`);
 
     //fetch chatroom from database
     const fetchRoomfromDB = async () => {
