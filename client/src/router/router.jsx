@@ -3,14 +3,14 @@ import Parent from "../pages/Parent";
 import CommunePage from "../pages/CommunePage";
 
 const router = createBrowserRouter([
-    {
-        path: "/homepage",
-        element: <Parent />,
-    },
-    {
-        path: "/commune",
-        element: <CommunePage />,
-    },
+  {
+    path: "/homepage",
+    element: <Parent />,
+  },
+  {
+    path: "/commune",
+    element: <CommunePage />,
+  },
 ]);
 
 export default router;
