@@ -4,6 +4,7 @@ import CommunePage from "../pages/CommunePage";
 import MockChatRoom from "../pages/test";
 
 const router = createBrowserRouter([
+
     {
         path: "/homepage",
         element: <Parent />,
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
         path: "/test",
         element: <MockChatRoom />,
     },
+
 ]);
 
 export default router;
