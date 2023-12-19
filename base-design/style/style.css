@@ -6,6 +6,7 @@
 	--primary-color: #359381;
 	--secondary-color: #65c1b0;
 	--accent-color: #003329;
+	--light-color: #aaa;
 }
 
 * {
@@ -261,6 +262,7 @@ header {
 	align-items: center;
 	padding: 15px;
 	border-bottom: 0.2rem solid var(--white-color);
+	cursor: pointer;
 }
 
 .leftside .chatlist .block .imgbx {
@@ -269,4 +271,85 @@ header {
 	height: 45px;
 	overflow: hidden;
 	border-radius: 3rem;
+	margin-right: 1rem;
 }
+
+.leftside .chatlist .block .details {
+	position: relative;
+	width: 100%;
+}
+
+.leftside .chatlist .block .details .listhead {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.leftside .chatlist .block .details .listhead h4 {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--white-color);
+}
+
+.leftside .chatlist .block .details .message-p {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.8rem;
+}
+
+.leftside .chatlist .block .details .message-p p {
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	font-size: 0.9rem;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.chat-box .container .rightside .header {
+	position: absolute;
+	width: 100%;
+	height: 15rem;
+	background: var(--white-color);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 1);
+	display: flex;
+	justify-content: space-between;
+	gap: 1.7rem;
+	align-items: center;
+	padding: 0 15px;
+	border-top-right-radius: 0.4rem;
+}
+
+.rightside .header .imgtext {
+	overflow: hidden;
+	border-radius: 100rem;
+	cursor: pointer;
+	left: 1rem;
+}
+
+.rightside .header .category {
+	display: flex;
+	flex-direction: column;
+}
+
+.rightside .header .category h1 {
+	position: relative;
+	color: var(--primary-color);
+	font-size: 2.7rem;
+	font-weight: 600;
+}
+
+.rightside .header .imgtext .cover {
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* FOR DEBUGGING STYLING */
+/* * {
+	outline: solid red;
+} */
