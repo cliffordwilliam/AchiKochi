@@ -231,7 +231,7 @@ header {
 	background: var(--secondary-color);
 	padding: 6px;
 	height: 38px;
-	border-radius: 1rem;
+	border-radius: 2.3rem;
 	font-size: 14px;
 	padding-left: 40px;
 }
@@ -245,4 +245,28 @@ header {
 	left: 30px;
 	top: 14px;
 	font-size: 1.2rem;
+}
+
+.leftside .chatlist {
+	position: relative;
+	height: calc(100% - 110px);
+	overflow-y: auto;
+}
+
+.leftside .chatlist .block {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	border-bottom: 0.2rem solid var(--white-color);
+}
+
+.leftside .chatlist .block .imgbx {
+	position: relative;
+	width: 45px;
+	height: 45px;
+	overflow: hidden;
+	border-radius: 3rem;
 }
