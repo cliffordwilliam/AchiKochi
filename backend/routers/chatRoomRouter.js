@@ -15,7 +15,7 @@ const chatRoomRouter = express.Router();
 // endpoints
 chatRoomRouter.get("/", ChatRoomController.get);
 chatRoomRouter.post("/", ChatRoomController.post);
-chatRoomRouter.delete("/", ChatRoomController.delete);
+chatRoomRouter.delete("/:id", ChatRoomController.delete);
 
 // exports
 module.exports = chatRoomRouter;

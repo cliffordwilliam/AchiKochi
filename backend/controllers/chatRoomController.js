@@ -17,14 +17,14 @@ module.exports = class ChatRoomController {
     static async post(req, res, next) {
         try {
             const { name } = req.body;
-            const res = await Chat_Room.create({
+            const obj = await Chat_Room.create({
                 name,
                 user_id: req.loggedInUser.id,
             });
             res.status(201).json({
                 status: 201,
                 msg: `Chat room successfully created.`,
-                chatRoom: res,
+                chatRoom: obj,
             });
         } catch (error) {
             next(error);
@@ -32,13 +32,12 @@ module.exports = class ChatRoomController {
     }
     static async delete(req, res, next) {
         try {
-            const res = await Chat_Room.destroy({
-                user_id: req.loggedInUser.id,
-            });
+            const { id } = req.params;
+            const obj = await Chat_Room.destroy({ where: { id } });
             res.status(200).json({
                 status: 200,
                 msg: `Chat room successfully deleted.`,
-                chatRoom: res,
+                chatRoom: obj,
             });
         } catch (error) {
             next(error);
