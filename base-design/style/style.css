@@ -6,6 +6,7 @@
 	--primary-color: #359381;
 	--secondary-color: #65c1b0;
 	--accent-color: #003329;
+	--light-color: #aaa;
 }
 
 * {
@@ -261,6 +262,7 @@ header {
 	align-items: center;
 	padding: 15px;
 	border-bottom: 0.2rem solid var(--white-color);
+	cursor: pointer;
 }
 
 .leftside .chatlist .block .imgbx {
@@ -269,4 +271,38 @@ header {
 	height: 45px;
 	overflow: hidden;
 	border-radius: 3rem;
+	margin-right: 1rem;
+}
+
+.leftside .chatlist .block .details {
+	position: relative;
+	width: 100%;
+}
+
+.leftside .chatlist .block .details .listhead {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.leftside .chatlist .block .details .listhead h4 {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--white-color);
+}
+
+.leftside .chatlist .block .details .message-p {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.8rem;
+}
+
+.leftside .chatlist .block .details .message-p p {
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	font-size: 0.9rem;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
