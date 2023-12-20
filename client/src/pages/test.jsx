@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import c from "../const";
@@ -17,7 +17,7 @@ const MockChatRoom = () => {
     const [roomId, setRoomId] = useState(21);
     const [chats, setChats] = useState([]); // all chats db
     const [headlines, setHeadlines] = useState([]);
-
+    const navi = useNavigate();
     //fetch chatroom from database
     const fetchRoomfromDB = async () => {
         try {
@@ -31,7 +31,7 @@ const MockChatRoom = () => {
     const fetchAPIHeadlines = async () => {
         try {
             const { data } = await axios.get(
-                "https://newsapi.org/v2/everything?q=anime&pageSize=2&page=3&apiKey=7288b0143d664745b3c6c0a004fe780f"
+                "https://newsapi.org/v2/everything?q=anime&pageSize=2&page=1&apiKey=7288b0143d664745b3c6c0a004fe780f"
             );
             setHeadlines(data.articles);
         } catch (error) {
@@ -175,17 +175,33 @@ const MockChatRoom = () => {
         setMessage("");
     };
 
+    const logout = () => {
+        localStorage.clear();
+        navi("/homepage"); //for now
+    };
+
     return (
         <>
             <body>
                 <header>
                     <h2 className="logo">あっちこっち</h2>
                     <nav className="navigation">
-                        <a href="">Home</a>
-                        <a href="">Login</a>
-                        <a href="">Register</a>
-                        <a href="">Post</a>
-                        <a href="">Logout</a>
+                        <Link>
+                            <a>Home</a>
+                        </Link>
+                        <Link>
+                            <a>Login</a>
+                        </Link>
+
+                        <Link>
+                            <a>Register</a>
+                        </Link>
+                        <Link>
+                            <a>Post</a>
+                        </Link>
+                        <Link>
+                            <a onClick={logout}>Logout</a>
+                        </Link>
                     </nav>
                 </header>
 
@@ -356,7 +372,7 @@ const MockChatRoom = () => {
                                 </div>
                             </div> */}
                             {chats.length === 0 ? (
-                                <p>Start Chat Now</p>
+                                <p>Start Chat Now...</p>
                             ) : (
                                 <>
                                     <ul>
