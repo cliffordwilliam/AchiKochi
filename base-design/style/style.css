@@ -349,6 +349,137 @@ header {
 	object-fit: cover;
 }
 
+/* Login Section Start */
+.title {
+	text-align: center;
+}
+
+.title h1 {
+	margin: 0;
+	padding: 0;
+	color: var(--sub-color);
+	text-transform: capitalize;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.container {
+	width: 50%;
+	height: 450px;
+	background: var(--white);
+	margin: 0 auto;
+	border: 1rem solid var(--main-color);
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.container .left {
+	float: left;
+	width: 50%;
+	height: 100%;
+	background: url(https://media.discordapp.net/attachments/712325980349530122/1182223580017213460/image0_0.jpg?ex=6583ea82&is=65717582&hm=f354efa631d3d5cc79af4dfae57b5f526222cca31af2f331eb28bac8c07e538f&=&format=webp&width=1056&height=1056);
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+.container .right {
+	float: right;
+	width: 50%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.formbox {
+	width: 100%;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	height: 400px;
+	background: var(--white);
+}
+
+.formbox p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.formbox input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.formbox input[type="text"],
+.formbox input[type="password"] {
+	border: none;
+	border-bottom: 2px solid var(--sub-color);
+	outline: none;
+	height: 40px;
+}
+
+.formbox input[type="text"]:focus,
+.formbox input[type="password"]:focus {
+	border-bottom: 2px solid var(--sub-color);
+}
+/* Login Section End */
+
+/* Register Section Start */
+.regis-container {
+	width: 100%;
+	height: 650px;
+	background: var(--white);
+	margin: 0 auto;
+	border: 1rem solid var(--main-color);
+	box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.regis-container .regis-left {
+	float: left;
+	width: 50%;
+	height: 100%;
+	background: url(https://media.discordapp.net/attachments/712325980349530122/1182223580310798396/image1_0.jpg?ex=6583ea82&is=65717582&hm=30a2fce4b591dad16c5056110ce8cabcf1d7cc49a6fb4414ea047226990cb633&=&format=webp&width=1056&height=1056);
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+.regis-container .regis-right {
+	float: right;
+	width: 50%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.regis-formbox {
+	width: 100%;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	height: 400px;
+	background: var(--white);
+}
+
+.regis-formbox p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.regis-formbox input {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.regis-formbox input[type="text"],
+.regis-formbox input[type="password"] {
+	border: none;
+	border-bottom: 2px solid var(--sub-color);
+	outline: none;
+	height: 40px;
+}
+
+.regis-formbox input[type="text"]:focus,
+.regis-formbox input[type="password"]:focus {
+	border-bottom: 2px solid var(--sub-color);
+}
+/* Register Section End */
+
 /* FOR DEBUGGING STYLING */
 /* * {
 	outline: solid red;
